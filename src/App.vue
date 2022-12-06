@@ -50,6 +50,24 @@ export default {
             href: '!#',
           },
         ],
+        social: [
+          {
+            social_ico: '<font-awesome-icon icon="fa-brands fa-linkedin" />',
+            href: '#!',
+          },
+          {
+            social_ico: '<font-awesome-icon icon="fa-brands fa-instagram" />',
+            href: '#!',
+          },
+          {
+            social_ico: '<font-awesome-icon icon="fa-brands fa-facebook" />',
+            href: '#!',
+          },
+          {
+            social_ico: '<font-awesome-icon icon="fa-brands fa-twitter" />',
+            href: '#!',
+          },
+        ],
       },
     };
   },
@@ -82,6 +100,14 @@ p, a {
 
 a {
   text-decoration: none;
+}
+
+ul {
+  display:flex;
+
+  li {
+    list-style: none;
+  }
 }
 
 img {

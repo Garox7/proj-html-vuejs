@@ -4,7 +4,7 @@
       <div class="logo">
         <img :src="headerData.logo.src" :alt="headerData.logo.alt">
       </div>
-      <div class="links">
+      <div class="links flex-row-center">
         <nav>
           <ul>
             <li v-for="obj in headerData.links" :key="obj.link">
@@ -12,6 +12,14 @@
             </li>
           </ul>
         </nav>
+        <div class="social">
+          <!-- <a v-for="obj in headerData.social"
+            :key="obj.social_ico"
+            :href="obj.href"
+          >
+            {{ obj.social_ico }}
+          </a> -->
+        </div>
       </div>
     </div>
   </header>

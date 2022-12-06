@@ -25,46 +25,51 @@ export default {
       headerData: {
         logo:
           {
-            src: 'assets/img/MasterStudy-1.svg',
+            src: 'img/MasterStudy-1.svg',
             alt: 'Logo',
           },
         links: [
           {
             link: 'Courses',
             href: '!#',
+            tag: false,
           },
           {
             link: 'Course Format',
             href: '!#',
+            tag: false,
           },
           {
             link: 'Add Course',
             href: '!#',
+            tag: true,
           },
           {
             link: 'Pages',
             href: '!#',
+            tag: false,
           },
           {
             link: 'Demos',
             href: '!#',
+            tag: false,
           },
         ],
         social: [
           {
-            social_ico: '<font-awesome-icon icon="fa-brands fa-linkedin" />',
+            social_ico: 'fa-brands fa-linkedin',
             href: '#!',
           },
           {
-            social_ico: '<font-awesome-icon icon="fa-brands fa-instagram" />',
+            social_ico: 'fa-brands fa-instagram',
             href: '#!',
           },
           {
-            social_ico: '<font-awesome-icon icon="fa-brands fa-facebook" />',
+            social_ico: 'fa-brands fa-facebook',
             href: '#!',
           },
           {
-            social_ico: '<font-awesome-icon icon="fa-brands fa-twitter" />',
+            social_ico: 'fa-brands fa-twitter',
             href: '#!',
           },
         ],
@@ -76,44 +81,7 @@ export default {
 
 <style lang="scss">
 @import '@/assets/scss/variables';
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  font-family: 'Roboto', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Slab', serif;
-  color: $text-color;
-}
-
-p, a {
-  color: $text-color;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  display:flex;
-
-  li {
-    list-style: none;
-  }
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
+@import '@/assets/scss/reset';
 
 // CONTAINER GENERAL SETTING
 .container {

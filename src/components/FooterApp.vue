@@ -1,5 +1,5 @@
 <template>
-  <h1>HelloFooter</h1>
+  <div></div>
 </template>
 
 <script>

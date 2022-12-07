@@ -94,7 +94,6 @@ export default {
         const hours = Math.floor((distance % this.days) / this.hours);
         const minutes = Math.floor((distance % this.hours) / this.minutes);
         const seconds = Math.floor((distance % this.minutes) / this.seconds);
-        /* eslint-disable */
         this.daysLeft = this.formatNum(days);
         this.hoursLeft = this.formatNum(hours);
         this.minutesLeft = this.formatNum(minutes);
@@ -152,20 +151,13 @@ export default {
 
       button {
         background-color: $firefly;
-        color: $white;
-        font-family: 'Roboto Slab', serif;
-        font-size: 12px;
         position: absolute;
         width: 20%;
         height: 100%;
         right: 0;
-        border: none;
-        border-radius: 30px;
-        transition: all .15s ease;
 
         &:hover {
           background-color: $buttercup;
-          box-shadow: -2px 0 5px rgba(0 0 0 / .3);
         }
       }
     }
@@ -173,7 +165,6 @@ export default {
 
   .countdown-container {
     flex: 1 1 40%;
-
 
     .counter {
       gap: 1.5rem;

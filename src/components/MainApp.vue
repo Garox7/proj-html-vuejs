@@ -19,9 +19,9 @@
     </section>
 
     <!-----------------
-        FIRM SECTION
+        SIGN SECTION
     ------------------->
-    <section class="sign-section flex-row-center">
+    <section class="sign-section">
       <div class="container flex-row-center">
         <div class="presentation flex-column-center">
           <h3>
@@ -34,16 +34,62 @@
         </div>
       </div>
     </section>
+
+    <!-----------------
+      NEW COURSE SECTION
+    ------------------->
+    <section class="newcourses-section">
+      <div class="container flex-column-center">
+        <h2>{{ mainData.newCoursesSection.title.text_title }}</h2>
+        <div class="card-container flex-row-center">
+          <CardCourses
+            v-for="card in mainData.newCoursesSection.courses"
+            :key="card.course_title"
+            :image="card.src"
+            :title="card.courses_title"
+            :category="card.category"
+            :level="card.level"
+            :lectures="card.lectures"
+            :duration="card.duration"
+            :price="card.price"
+            class="card"
+          />
+        </div>
+        <button>Load More</button>
+      </div>
+    </section>
+
+    <!-----------------
+      ORDER BOOK SECTION
+    ------------------->
+    <section class="orderbook-section"
+    :style="{backgroundImage: `url(${mainData.orderBookSection.bg_img})`}"
+    >
+      <div class="container flex-row-center">
+        <div class="cta flex-column-center">
+          <h2>{{ mainData.orderBookSection.title }}</h2>
+          <p class="bold-italic">{{ mainData.orderBookSection.text }}</p>
+          <div href="!#">
+            <img :src="mainData.orderBookSection.btn_amazon" alt="">
+          </div>
+        </div>
+        <div class="left-img flex-row-center">
+          <img :src="mainData.orderBookSection.book_img" alt="">
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
 import MailCounter from '@/components/MailCounter.vue';
+import CardCourses from '@/components/CardCourses.vue';
 
 export default {
   name: 'MainApp',
   components: {
     MailCounter,
+    CardCourses,
   },
   props: {
     mainData: Object,
@@ -54,6 +100,10 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/scss/variables';
 @import '@/assets/scss/reset';
+
+/******************
+   HERO SECTION
+*******************/
 .hero-section {
   height: 565px;
   background-position: center;
@@ -83,11 +133,16 @@ export default {
     }
   }
 }
+
+/******************
+   SIGN SECTION
+*******************/
 .sign-section {
+  margin-bottom: 1rem;
   height: 405px;
 
   .container {
-    margin-top: 1.5rem;
+    // margin-top: 1.5rem;
     gap: 4rem;
 
     .presentation {
@@ -107,6 +162,81 @@ export default {
         font-weight: 300;
         font-size: 13px;
         line-height: 2;
+      }
+    }
+  }
+}
+
+/******************
+  NEW COURSES SECTION
+*******************/
+.newcourses-section {
+  background-color: $shakespeare;
+  padding: 2.5rem 0;
+
+  .card-container {
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .card {
+      flex: 1 1 calc(100% / 3 - 1rem);
+      min-width: 250px;
+    }
+  }
+
+  button {
+    background-color: $buttercup;
+    margin-top: 2rem;
+
+    &:hover {
+      background-color: $firefly;
+      box-shadow: 2px 2px 5px rgba(0 0 0 / .3);
+    }
+  }
+}
+
+/******************
+  ORDER BOOK SECTION
+*******************/
+.orderbook-section {
+  height: 405px;
+  overflow: hidden;
+
+  .container {
+    padding-bottom: 0px;
+
+    .cta {
+      flex: 1 1 40%;
+      text-align: center;
+
+      h2 {
+        font-family: 'Roboto', sans-serif;
+        color: $buttercup;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        color: $white;
+        font-size: 20px;
+        font-style: italic;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
+
+      img{
+        max-width: 180px;
+      }
+    }
+
+    .left-img {
+      flex: 1 1 60%;
+      max-width: 380px;
+      display: block;
+      align-items: flex-end;
+
+      img{
+        margin-bottom: -20px;
       }
     }
   }

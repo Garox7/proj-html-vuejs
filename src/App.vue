@@ -6,7 +6,9 @@
     <MainApp
       :mainData="mainData"
     />
-    <FooterApp />
+    <FooterApp
+      :footerData="footerData"
+    />
   </div>
 </template>
 
@@ -246,6 +248,59 @@ export default {
             review_text: 'Il Master ha rappresentato per me un decisivo acceleratore verso il mondo del lavoro, avvicinandomi velocemente e in maniera più qualificata e strutturata, a primari contesti lavorativi nazionali e multinazionali.',
           },
         ],
+      },
+      footerData: {
+        first_column: {
+          title: 'ABOUT',
+          text: 'Masterstudy is Education WordPress theme featured by Learning Management System (LMS) for online education. developed by a Boolean student.',
+          social: [
+            {
+              social_ico: 'fa-brands fa-facebook',
+              href: '#!',
+            },
+            {
+              social_ico: 'fa-brands fa-twitter',
+              href: '#!',
+            },
+            {
+              social_ico: 'fa-brands fa-instagram',
+              href: '#!',
+            },
+          ],
+        },
+        second_column: {
+          title: 'CONTACT',
+          address: 'USA, California 46, First Avenue, California',
+          tel: '+1 212 458 300 46',
+          fax: '+1 212 357 375 24 46',
+          email: 'info@masterstudy.com',
+        },
+        third_column: {
+          title: 'PAGES',
+          links: [
+            'blog',
+            'Home',
+            'Shortcodes',
+            'Courses',
+            'Membership',
+            'Typografy',
+          ],
+        },
+        fourth_column: {
+          title: 'BLOG',
+          blogs: [
+            {
+              img: 'img/Blog1.jpeg',
+              title: 'Our Main target is to "Developing Yourself as a Leader"',
+              date: 'August 9, 2022',
+            },
+            {
+              img: 'img/Blog2.jpeg',
+              title: 'Those Other COllege Exanses You Aren\'t Thinking About',
+              date: 'August 20, 2022',
+            },
+          ],
+        },
       },
     };
   },

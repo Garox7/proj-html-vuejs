@@ -78,18 +78,38 @@
         </div>
       </div>
     </section>
+
+    <!-----------------
+      BENEFITS SECTION
+    ------------------->
+    <section class="benefits-section">
+      <div class="container flex-column-center">
+        <h2>{{ mainData.benefitsSection.title.title }}</h2>
+        <div class="card-container flex-row-center">
+          <CardBenefit v-for="card in mainData.benefitsSection.benefit"
+            :key="card.title"
+            :title="card.title"
+            :text="card.text"
+            :icon="card.benefit_icon"
+            class="card"
+          />
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
 import MailCounter from '@/components/MailCounter.vue';
 import CardCourses from '@/components/CardCourses.vue';
+import CardBenefit from '@/components/CardBenefit.vue';
 
 export default {
   name: 'MainApp',
   components: {
     MailCounter,
     CardCourses,
+    CardBenefit,
   },
   props: {
     mainData: Object,
@@ -238,6 +258,27 @@ export default {
       img{
         margin-bottom: -20px;
       }
+    }
+  }
+}
+
+/******************
+  BENEFITS SECTION
+*******************/
+.benefits-section{
+  padding: 2.5rem 0;
+
+  h2{
+    margin-bottom: 1rem;
+  }
+  .card-container {
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .card{
+      flex: 1 1 calc(100% / 2 - 1rem);
+      min-width: 320px;
     }
   }
 }

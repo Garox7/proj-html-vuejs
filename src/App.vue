@@ -177,6 +177,35 @@ export default {
             book_img: 'img/book.png',
             bg_img: 'img/slide-2.jpg',
           },
+        benefitsSection:
+          {
+            title:
+              {
+                title: 'Why my Courses?',
+              },
+            benefit: [
+              {
+                title: 'Entrepreneurship',
+                text: 'Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate',
+                benefit_icon: 'fa-regular fa-thumbs-up',
+              },
+              {
+                title: 'Accelerated learning',
+                text: 'Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate',
+                benefit_icon: 'fa-solid fa-gear',
+              },
+              {
+                title: 'Productivity',
+                text: 'Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate',
+                benefit_icon: 'fa-solid fa-rocket',
+              },
+              {
+                title: 'Life Coaching',
+                text: 'Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate',
+                benefit_icon: 'fa-solid fa-briefcase',
+              },
+            ],
+          },
       },
     };
   },

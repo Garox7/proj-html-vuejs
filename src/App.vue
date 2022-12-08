@@ -226,6 +226,26 @@ export default {
               },
             ],
           },
+        ReviewCarousel: [
+          {
+            people_img: 'img/people1.jpg',
+            review_title: 'Electronic Music Course',
+            vote: 5,
+            review_text: 'Ho frequentato il master in Music Business Management. Il corso mi ha permesso di acquisire conoscenze fondamentali per l\'industria musicale e di conoscere importanti professionisti del settore che mi hanno aiutata ad aprire gli occhi sul percorso che vorrei intraprendere nella mia vita lavorativa.',
+          },
+          {
+            people_img: 'img/people2.jpg',
+            review_title: 'Fashion Photograpy',
+            vote: 5,
+            review_text: 'Ho scelto questo Master per dare nuovo slancio alla mia carriera professionale. Le lezioni pratiche ed interattive ed i business case affrontati mi hanno aiutata nella gestione concreta delle issues più ricorrenti nel mondo del Fashion. Ho conosciuto tools digitali utili e facilmente fruibili. Last but not least: il Master è una grande opportunità di networking.',
+          },
+          {
+            people_img: 'img/people3.jpg',
+            review_title: 'Communication course',
+            vote: 4,
+            review_text: 'Il Master ha rappresentato per me un decisivo acceleratore verso il mondo del lavoro, avvicinandomi velocemente e in maniera più qualificata e strutturata, a primari contesti lavorativi nazionali e multinazionali.',
+          },
+        ],
       },
     };
   },
@@ -239,6 +259,13 @@ export default {
 // CONTAINER GENERAL SETTING
 .container {
   max-width: 850px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.container-small {
+  max-width: 600px;
   height: 100%;
   margin: 0 auto;
   padding: 1rem;

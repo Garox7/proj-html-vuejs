@@ -9,12 +9,16 @@ import {
   faRocket,
   faBriefcase,
   faFilm,
+  faAngleLeft,
+  faAngleRight,
+  faStar,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faClock,
   faThumbsUp,
   faImage,
   faUser,
+  faStar as faStarEmpty,
 } from '@fortawesome/free-regular-svg-icons';
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -35,6 +39,10 @@ library.add(
   faImage,
   faFilm,
   faUser,
+  faAngleLeft,
+  faAngleRight,
+  faStar,
+  faStarEmpty,
 );
 
 Vue.component('FontAwesomeIcon', FontAwesomeIcon);

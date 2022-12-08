@@ -119,8 +119,10 @@
       REVIEW SECTION
     ------------------->
     <section class="review-section">
-      <div class="container">
-
+      <div class="container-small">
+        <ReviewCarousel
+          :reviewData="mainData.ReviewCarousel"
+        />
       </div>
     </section>
   </main>
@@ -131,6 +133,7 @@ import MailCounter from '@/components/MailCounter.vue';
 import CardCourses from '@/components/CardCourses.vue';
 import CardBenefit from '@/components/CardBenefit.vue';
 import GoalsAchieved from '@/components/GoalsAchieved.vue';
+import ReviewCarousel from '@/components/ReviewCarousel/ReviewCarousel.vue';
 
 export default {
   name: 'MainApp',
@@ -139,6 +142,7 @@ export default {
     CardCourses,
     CardBenefit,
     GoalsAchieved,
+    ReviewCarousel,
   },
   props: {
     mainData: Object,
@@ -322,5 +326,12 @@ GOALS ACHIEVED SECTION
   .goals-container {
     gap: 2.5rem;
   }
+}
+
+/******************
+  REVIEW SECTION
+*******************/
+.review-section {
+  padding: 2.5rem 0;
 }
 </style>

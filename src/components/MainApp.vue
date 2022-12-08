@@ -40,7 +40,7 @@
     ------------------->
     <section class="newcourses-section">
       <div class="container flex-column-center">
-        <h2>{{ mainData.newCoursesSection.title.text_title }}</h2>
+        <h2>{{ mainData.newCoursesSection.title }}</h2>
         <div class="card-container flex-row-center">
           <CardCourses
             v-for="card in mainData.newCoursesSection.courses"
@@ -84,7 +84,7 @@
     ------------------->
     <section class="benefits-section">
       <div class="container flex-column-center">
-        <h2>{{ mainData.benefitsSection.title.title }}</h2>
+        <h2>{{ mainData.benefitsSection.title }}</h2>
         <div class="card-container flex-row-center">
           <CardBenefit v-for="card in mainData.benefitsSection.benefit"
             :key="card.title"
@@ -96,6 +96,33 @@
         </div>
       </div>
     </section>
+
+    <!-----------------
+    GOALS ACHIEVED SECTION
+    ------------------->
+    <section class="goals-achieved-section flex-row-center"
+    :style="{backgroundImage: `url(${mainData.goalsAchievedSection.bg_image})`}">
+      <div class="container flex-row-center">
+        <div class="goals-container flex-row-center">
+          <GoalsAchieved v-for="goal in mainData.goalsAchievedSection.goals"
+            :key="goal.goal_text"
+            :icon="goal.goal_icon"
+            :number="goal.goal_num"
+            :text="goal.goal_text"
+            class="goals"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-----------------
+      REVIEW SECTION
+    ------------------->
+    <section class="review-section">
+      <div class="container">
+
+      </div>
+    </section>
   </main>
 </template>
 
@@ -103,6 +130,7 @@
 import MailCounter from '@/components/MailCounter.vue';
 import CardCourses from '@/components/CardCourses.vue';
 import CardBenefit from '@/components/CardBenefit.vue';
+import GoalsAchieved from '@/components/GoalsAchieved.vue';
 
 export default {
   name: 'MainApp',
@@ -110,6 +138,7 @@ export default {
     MailCounter,
     CardCourses,
     CardBenefit,
+    GoalsAchieved,
   },
   props: {
     mainData: Object,
@@ -280,6 +309,18 @@ export default {
       flex: 1 1 calc(100% / 2 - 1rem);
       min-width: 320px;
     }
+  }
+}
+
+/******************
+GOALS ACHIEVED SECTION
+*******************/
+.goals-achieved-section {
+  height: 405px;
+  background-position: bottom 80% right 50%;
+
+  .goals-container {
+    gap: 2.5rem;
   }
 }
 </style>

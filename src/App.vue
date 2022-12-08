@@ -107,10 +107,7 @@ export default {
           },
         newCoursesSection:
           {
-            title:
-              {
-                text_title: 'New Courses',
-              },
+            title: 'New Courses',
             courses: [
               {
                 src: 'img/course1.jpeg',
@@ -179,10 +176,7 @@ export default {
           },
         benefitsSection:
           {
-            title:
-              {
-                title: 'Why my Courses?',
-              },
+            title: 'Why my Courses?',
             benefit: [
               {
                 title: 'Entrepreneurship',
@@ -203,6 +197,32 @@ export default {
                 title: 'Life Coaching',
                 text: 'Vestibulum vitae aliquam nunc. Suspendisse mollis metus ac tellus egestas pharetra. Suspendisse at viverra purus. Pellentesque nec posuere ligula, eu congue leo. Integer vulputate tempor arcu. Vestibulum vulputate',
                 benefit_icon: 'fa-solid fa-briefcase',
+              },
+            ],
+          },
+        goalsAchievedSection:
+          {
+            bg_image: 'img/slide-3.jpg',
+            goals: [
+              {
+                goal_icon: 'fa-regular fa-user',
+                goal_num: 3195,
+                goal_text: 'Online Learder',
+              },
+              {
+                goal_icon: 'fa-solid fa-film',
+                goal_num: 23,
+                goal_text: 'Video Courses',
+              },
+              {
+                goal_icon: 'fa-regular fa-image',
+                goal_num: 437,
+                goal_text: 'Sliders & Image',
+              },
+              {
+                goal_icon: 'fa-solid fa-briefcase',
+                goal_num: 1440,
+                goal_text: 'Excellent Reviews',
               },
             ],
           },

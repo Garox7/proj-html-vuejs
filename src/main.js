@@ -8,8 +8,15 @@ import {
   faGear,
   faRocket,
   faBriefcase,
+  faFilm,
 } from '@fortawesome/free-solid-svg-icons';
-import { faClock, faThumbsUp } from '@fortawesome/free-regular-svg-icons';
+import {
+  faClock,
+  faThumbsUp,
+  faImage,
+  faUser,
+} from '@fortawesome/free-regular-svg-icons';
+
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
 
@@ -25,6 +32,9 @@ library.add(
   faGear,
   faRocket,
   faBriefcase,
+  faImage,
+  faFilm,
+  faUser,
 );
 
 Vue.component('FontAwesomeIcon', FontAwesomeIcon);

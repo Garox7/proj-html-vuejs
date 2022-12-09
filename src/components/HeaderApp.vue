@@ -47,7 +47,6 @@ header {
   height: $header-height;
 
   .container {
-    padding: $header-padding;
     justify-content: space-between;
 
     .logo {

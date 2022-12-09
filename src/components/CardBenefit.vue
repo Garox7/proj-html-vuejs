@@ -46,6 +46,10 @@ export default {
     background-color: $buttercup;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+    p {
+      color: $firefly;
+    }
+
     .icon-container.flex-row-center .benefit-icon {
       color: $white;
     }

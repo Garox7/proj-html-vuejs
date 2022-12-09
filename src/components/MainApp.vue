@@ -73,7 +73,7 @@
             <img :src="mainData.orderBookSection.btn_amazon" alt="">
           </div>
         </div>
-        <div class="left-img flex-row-center">
+        <div class="right-img flex-row-center">
           <img :src="mainData.orderBookSection.book_img" alt="">
         </div>
       </div>
@@ -158,20 +158,19 @@ export default {
    HERO SECTION
 *******************/
 .hero-section {
-  height: 565px;
+  height: $hero-height;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 
   .text-container {
-    max-width: 420px; //variable
+    max-width: $text-container-width;
     position: absolute;
     left: 45%;
     bottom: 50%;
 
     h1 {
-      margin-bottom: 1rem;
       line-height: 1;
 
       span {
@@ -180,8 +179,6 @@ export default {
     }
 
     p {
-      color: $dove-gray;
-      font-size: 14px;
       line-height: 2;
     }
   }
@@ -192,10 +189,9 @@ export default {
 *******************/
 .sign-section {
   margin-bottom: 1rem;
-  height: 405px;
+  height: $sign-height;
 
   .container {
-    // margin-top: 1.5rem;
     gap: 4rem;
 
     .presentation {
@@ -212,8 +208,6 @@ export default {
       flex: 1 1 60%;
 
       p {
-        font-weight: 300;
-        font-size: 13px;
         line-height: 2;
       }
     }
@@ -253,7 +247,7 @@ export default {
   ORDER BOOK SECTION
 *******************/
 .orderbook-section {
-  height: 405px;
+  height: $order-book-height;
   overflow: hidden;
 
   .container {
@@ -266,7 +260,6 @@ export default {
       h2 {
         font-family: 'Roboto', sans-serif;
         color: $buttercup;
-        margin-bottom: 1rem;
       }
 
       p {
@@ -282,7 +275,7 @@ export default {
       }
     }
 
-    .left-img {
+    .right-img {
       flex: 1 1 60%;
       max-width: 380px;
       display: block;
@@ -301,9 +294,6 @@ export default {
 .benefits-section{
   padding: 2.5rem 0;
 
-  h2{
-    margin-bottom: 1rem;
-  }
   .card-container {
     padding: 1rem;
     gap: 1rem;
@@ -320,7 +310,7 @@ export default {
 GOALS ACHIEVED SECTION
 *******************/
 .goals-achieved-section {
-  height: 405px;
+  height: $goal-section-height;
   background-position: bottom 80% right 50%;
 
   .goals-container {

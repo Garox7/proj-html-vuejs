@@ -89,12 +89,6 @@ export default {
     .info-top {
       flex: 0 0 auto;
       text-align: center;
-
-      p {
-        font-size: 14px;
-        color: $dove-gray;
-        margin-top: 1rem;
-      }
     }
 
     .info-bottom {

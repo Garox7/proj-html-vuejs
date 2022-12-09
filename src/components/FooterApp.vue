@@ -12,6 +12,7 @@
           />
         </div>
       </div>
+
       <div class="contact">
         <h4>{{ footerData.second_column.title }}</h4>
         <p>{{ footerData.second_column.address }}</p>
@@ -65,7 +66,7 @@ export default {
 
 footer {
   background-color: $buttercup;
-  height: 230px;
+  height: $footer-heigth;
   padding: 2rem;
 
   .container {
@@ -78,6 +79,7 @@ footer {
 
   p {
     font-size: 12px;
+    color: $firefly;
   }
 
   .about {

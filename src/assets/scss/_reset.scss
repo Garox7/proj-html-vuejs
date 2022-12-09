@@ -13,7 +13,8 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto Slab', serif;
-  color: $text-color;
+  color: $firefly;
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -30,7 +31,7 @@ h3 {
 
 p, a {
   font-size: 14px;
-  color: $text-color;
+  color: $dove-gray;
 }
 
 p {
@@ -68,5 +69,19 @@ button {
 
   &:hover {
     box-shadow: -2px 0 5px rgba(0 0 0 / .3);
+  }
+}
+
+input[type=mail] {
+  width: 100%;
+  border: none;
+  height: 2.5rem;
+  padding: 1rem;
+  border-radius: 30px;
+  box-shadow: 2px 2px 4px rgba(0 0 0 / .2);
+
+  &:focus-visible {
+    outline: 1px solid $firefly;
+    box-shadow: -2px 2px 4px rgba(0 0 0 / .2);
   }
 }

@@ -135,20 +135,6 @@ export default {
     .label-mail {
       position: relative;
 
-      input {
-        width: 100%;
-        border: none;
-        height: 2.5rem;
-        padding: 1rem;
-        border-radius: 30px;
-        box-shadow: 2px 2px 4px rgba(0 0 0 / .2);
-
-        &:focus-visible {
-          outline: 1px solid $firefly;
-          box-shadow: -2px 2px 4px rgba(0 0 0 / .2);
-        }
-      }
-
       button {
         background-color: $firefly;
         position: absolute;
@@ -171,12 +157,14 @@ export default {
 
       h1 {
         color: $white;
+        margin-bottom: 0;
       }
 
       p {
         font-family: 'Roboto Slab', serif;
         font-size: 14px;
         font-weight: bold;
+        color: $firefly;
       }
     }
 

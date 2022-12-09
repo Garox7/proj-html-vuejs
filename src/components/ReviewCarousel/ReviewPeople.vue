@@ -1,7 +1,6 @@
 <template>
     <div class="people" :style="{ backgroundImage: `url(${people})` }"
-    :class="(currentReviews === index ? 'big': 'small')"
-    >
+      :class="(currentReviews === index ? 'big': 'small')">
     </div>
 </template>
 

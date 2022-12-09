@@ -1,7 +1,6 @@
 /**********************
     COLOR PALETTE
 ***********************/
-$text-color: #252525;
 $buttercup: #f2b71d;
 $red: #ff0000;
 $white: #fff;
@@ -15,6 +14,27 @@ $hover-black: rgba(0, 0, 0, 0.4);
     HEADER SETTING
 ***********************/
 $header-height: 80px;
-$header-padding: 1rem;
 $link-font-size: 14px;
 $logo-width: 150px;
+
+/**********************
+    MAIN SETTING
+***********************/
+
+/* Hero Section */
+$hero-height: 565px;
+$text-container-width: 420px;
+
+/* Sign Section */
+$sign-height: 405px;
+
+/* OrderBook Section */
+$order-book-height: 405px;
+
+/* Goals Section */
+$goal-section-height: 405px;
+
+/**********************
+    FOOTER SETTING
+***********************/
+$footer-heigth: 230px;

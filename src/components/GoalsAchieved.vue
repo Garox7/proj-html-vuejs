@@ -28,7 +28,7 @@ export default {
 .goal-acheived {
 
 .icon {
-  font-size: 52px;
+  font-size: 48px;
   color: $white;
   margin-right: 1rem;
 }
@@ -36,6 +36,7 @@ export default {
   .goal-score {
     h2 {
       color: $buttercup;
+      margin-bottom: 0;
     }
 
     p {

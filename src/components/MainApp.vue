@@ -43,8 +43,8 @@
         <h2>{{ mainData.newCoursesSection.title }}</h2>
         <div class="card-container flex-row-center">
           <CardCourses
-            v-for="card in mainData.newCoursesSection.courses"
-            :key="card.course_title"
+            v-for="(card, i) in courseInitial"
+            :key="i"
             :image="card.src"
             :title="card.courses_title"
             :category="card.category"
@@ -55,7 +55,7 @@
             class="card"
           />
         </div>
-        <button>Load More</button>
+        <button @click="loadMore">{{allVisible ? 'Load Less' : 'Load More'}}</button>
       </div>
     </section>
 
@@ -146,6 +146,40 @@ export default {
   },
   props: {
     mainData: Object,
+  },
+  data() {
+    return {
+      courseLength: 3,
+      allVisible: false,
+    };
+  },
+  methods: {
+    loadMore() {
+      const objLength = this.mainData.newCoursesSection.courses.length;
+
+      if (this.courseLength < objLength) {
+        this.courseLength += 3;
+        console.log('elementi visibili:', this.courseLength); // DEBUG
+
+        if (this.courseLength >= objLength) {
+          this.allVisible = true;
+          console.log('adesso appare "Load Less"', this.allVisible); // DEBUG
+        }
+      } else {
+        this.courseLength = 3;
+        console.log('elementi visibili:', this.courseLength); // DEBUG
+
+        if (this.courseLength <= objLength) {
+          this.allVisible = false;
+          console.log('adesso appare "Load Less"', this.allVisible); // DEBUG
+        }
+      }
+    },
+  },
+  computed: {
+    courseInitial() {
+      return this.mainData.newCoursesSection.courses.slice(0, this.courseLength);
+    },
   },
 };
 </script>
